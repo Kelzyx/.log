@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alguma Coisa</title>
+    <title>Página de Login</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="/scripts/login.js" defer></script>
 </head>
 <body>
-    <div id="backOverlay"></div>
-    <main class="mainHeader">
-        <div>
-            <h1 id="loginID">Sign-in</h1>
-        </div> 
-        <div class="formGroup">
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" required>
-            <label for="password">Senha</label>
-            <input type="password" id="password" name="password" required>
+    
+    <div class="backOverlay"></div>
+    <div class="mainLogin">
+       
+        <div class="loginStyle">
+            <h1>Faça seu login</h1> 
+            <img src="./src/graduate.svg" class="animateImage" alt="graduateAnim">
+            <footer>Painel de controle</footer>
         </div>
-        <div class="inputGroup">
-            <button type="submit" name="sendLogin" value="Login">Login</button>
-        </div>
-    </main>
+        <form class="formLogin">
+            <div class="loginBase">
+                <div class="cardLogin">
+                    <h1>Login de Usuário</h1>
+                    <div class="textLogin">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" class= "userId" placeholder="Usuário">
+                </div>
+                    <div class="textLogin">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" class="senhaId" placeholder="Senha">
+                    </div>
+                    <button type="submit" class="btnLogin">Login</button>
+                </div>    
+            </div>    
+        </form>    
+    </div>
+
 </body>
+
 </html>
