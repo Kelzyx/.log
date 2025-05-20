@@ -1,148 +1,363 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+    z-index: 10;
 }
 
 html, body {
-    display: flex;
-    background: black;
-    font-family: 'Noto Sans', sans-serif;
+    font-family:'Montserrat', Arial, sans-serif;
+    height: max-content ;
 }
 
-body * {
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    max-height: 100%;
+    z-index: -2;
+    background: radial-gradient(circle, rgba(255,0,255,1) 10%, rgba(100,0,255,1) 100%);
+}
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background: linear-gradient(to left,purple 70%,blue);
+    width: 100%;
+    height: 12vh;
+    z-index: 20;
+}
+
+/* Icone de Navegação */
+
+.navBarIcon {
+    margin: 2vh;
+    width: 7vh;
+    height: auto;
     box-sizing: border-box;
 }
 
-.mainLogin {
-    width: 100vw;
-    height: 100vh;
-    background: rgba(75, 0, 130, 0.2);
-    color: white;
+/* Barra de Navegação */
+
+.navBarRight {
     display: flex;
+    color: white;
+    flex-direction: column;
+}
+
+/* Lista da Navegação */
+
+.navBarList {
+    display: flex;
+    gap: 4rem;
     justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+    padding-right: 1rem;
+}
+
+/* Titulo da Navegação */
+
+.titleNav { 
+    padding-top: 3vh;
+    display: block;
+    font-weight: 700;
+    font-size: 2.7rem;
+    padding-right: 0rem;
+    letter-spacing: 0.5rem;
+    justify-content: flex-end;
     text-align: center;
     align-items: center;
 }
 
-
-.loginStyle {
-    display: flex;
-    width: 50vw;
+.sideBar {
+    background: linear-gradient(to top,purple,blue);
+    width: 10vh;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    position: fixed;
+    z-index: 1;
 }
 
-.loginStyle h1 {
-    font-size: 3vw;
-}
-.loginStyle footer {
-    font-size: 1vw;
-}
-.animateImage {
-    width: 35vw;
-}
-
-.loginBase {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cardLogin {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background: #f1f1;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px black;
-
-}
-
-.cardLogin h1 {
-    color: rgba(130,0,200);
-    font-weight: 800;
+.sideBar ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-}
-
-.textLogin {
-    width: 100%;
-    flex-direction: column;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
-
-.textLogin input {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: rgba(50,50,50);
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     color: #f1f1f1;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px black;
-    outline: none;
-    box-sizing: border-box;
+  
+    gap: 5rem;
 }
 
-.textLogin label {
+.sideBarItem {
+    text-align: center;
+    padding: 1rem;  
+    cursor: pointer;
+    position: relative;
+}
+
+.sideBarItem li {
+    text-align: center;
+}
+
+.sideToolTip {
+    display: block;
+    opacity: 0;
+    position: absolute;
     color: white;
-    margin: 10px 0px;
-}
-
-.btnLogin {
-    width: 100%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
+    left: 5%;
+    top: 50%;
+    background: radial-gradient(circle, rgba(200,0,255,1) 0%, rgba(100,0,255,1) 100%);
+    transform: translateY(-50%);
+    padding: 0.5rem 1rem;
     border-radius: 20px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    background: rgba(75,0,200);
-    box-shadow: 0px 0px 40px rgba(150,0,255,0.3);
+    transition:  left 0.1s ease-in-out, opacity 0.1s ease-in-out;
+    min-width: 900px;
+    z-index: 10;
+    pointer-events: none;
+    font-size: 15px;
+    max-height: 100vh;
 }
 
-.btnLogin:hover {
+.sideBarItem:hover .sideToolTip {
+    left: 130%;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.localImage {
+    max-width: 50%;
+    margin: 0 auto 1rem auto;
+    position: relative;
+    display: block;
+}
+
+.containerArticle {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vh;
+    width: 70vw;
+}
+
+.aboutUs {
+    text-align: center;
+    margin: 0;
+    padding: 3rem 5rem;
+    color: #f1f1f1;
+    text-align: left;
+}
+
+.contentBox {
+    background: radial-gradient(circle, rgba(190,0,255,1), rgba(100,0,255,1));
+    padding: 3rem 4rem;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 30px black;
+    gap: 2rem;
+}
+
+.backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%    ;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.aboutUsRow {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.aboutUsH {
+    margin: 0;
+    padding: 0 1rem 0 0;
+    font-size: 3rem;
+    line-height: 100px;
+    display: flex;
+
+}
+
+.aboutUsImg {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px black;
+}
+
+.noss {
+    font-size: 100px;
+}
+
+.Sod {
+    font-size: 20px;
+    text-align: center;
+}
+
+.butS {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: auto;
+}
+
+.containerLogin {
+    display: flex;
+    position: fixed;
+    z-index: 50;
+    justify-content: flex-end;
+    top: 50%;
+    left: 70%;
+    
+}
+
+.containerLogin2 {
+    display: flex;
+    background: radial-gradient(circle, rgba(190,0,255,0.5), rgba(100,0,255,1));
+    border-radius: 20px;
+    width: 40vh;
+    height: 40vh;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 30px black;
+}
+
+.loginTitle {
+    padding-top: 2vh;
+    font-size: 50px;
+    text-transform: uppercase;  
+}
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 5vh;
+    height: 5vh;
+}
+
+.inputContainer input {
+    width: 40%;
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: #f1f1f1;
+    font-size: 15px;
+    height: 1vh;
+
+}
+
+button {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    height: 5vh;
+    margin: 4vh;
+    background-color: blue;
+    text-decoration: none;
+    border-radius: 20px;
+    width:40%;
+    font-size: 30px;
+    border-style: none;
+    transition: transform 0.2s;
+}
+
+
+.inputContainer label {
+    font-size: 20px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: black;
     color: white;
-    background: black;
+    cursor: pointer;
+    transform: scale(1.5);
 }
 
-@media only screen and (max-width: 950px){
-    .cardLogin {
-        width: 80%;
-    }
+.aboutUsImg2 {
+    display: flex;
+    width: 300px;
+    position: fixed;
+    height: 300px;
+    z-index: 60;
+    top: 15%;
+    left: 72%;
 }
-@media only screen and (max-width: 600px){
-    .mainLogin {
+
+.eyeIcon {
+    width: 10%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+    .containerArticle,
+    .contentBox {
+        width: 95vw;
+        padding: 1rem;
+        max-width: 100vw;
+    }
+    .aboutUsH, .noss {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .aboutUsImg, .aboutUsImg2 {
+        width: 150px;
+        height: auto;
+        left: 50%;
+        top: 5%;
+        transform: translateX(-50%);
+        position: static;
+        margin: 1rem auto;
+        display: block;
+    }
+    .containerLogin {
+        left: 0;
+        top: auto;
+        bottom: 0;
+        width: 100vw;
+        justify-content: center;
+        position: static;
+    }
+    .containerLogin2 {
+        width: 90vw;
+        height: auto;
+        min-height: 300px;
+    }
+    .aboutUsRow, .butS {
         flex-direction: column;
+        gap: 1rem;
     }
-    .loginStyle h1{
-        display: none;
-    }
-    .loginStyle {
-        width: 100%;
-        height: auto;
-    }
-    .loginBase {
-        width: 100%;
-        height: auto;
-    }
-    .animateImage {
-        width: 50vw;
-    }
-    .cardLogin {
+    .inputContainer input {
         width: 90%;
     }
 }
