@@ -1,4 +1,5 @@
-window.buttonLogin = window.document.querySelector(".btnLogin");
-window.formLogin = window.document.querySelector(".formLogin");
-window.userId = window.document.querySelector(".userId");
-window.passwordReset = window.document.querySelector(".senhaId");
+window.LoginButton = document.querySelector(".buttonLogin");
+window.password = document.querySelector('[name="password"]');
+window.email = document.querySelector('[name="email"]');
+window.formLogin = document.querySelector(".loginForm");
+window.eyeIcon = document.querySelector(".eyeIcon");

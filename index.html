@@ -1,41 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login</title>
+    <title>Graduação</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-    <script src="/scripts/login.js" defer></script>
+    <script src="./scripts/login.js" defer></script>
+    <script src="./scripts/eyePass.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div class="backOverlay"></div>
-    <div class="mainLogin">
-       
-        <div class="loginStyle">
-            <h1>Faça seu login</h1> 
-            <img src="./src/graduate.svg" class="animateImage" alt="graduateAnim">
-            <footer>Painel de controle</footer>
+    <img src="/src/backOverlay.gif" alt="gif" class="backgroundVideo" aria-hidden="true">
+    <div class="background"></div>
+    <nav class="navBar">
+        <div>    
+            <a href="#"><img class="navBarIcon" src="src/srcInstagram.png"></a>
         </div>
-        <form class="formLogin">
-            <div class="loginBase">
-                <div class="cardLogin">
-                    <h1>Login de Usuário</h1>
-                    <div class="textLogin">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" class= "userId" placeholder="Usuário">
-                </div>
-                    <div class="textLogin">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" class="senhaId" placeholder="Senha">
+        <div class="navBarRight">
+            <h1 class="titleNav">UNIESP</h1>
+            <ol class="navBarList">
+                <li>Home</li>
+                <li>Sobre</li>
+                <li>Contato</li>
+            </ol>
+        </div>
+    </nav>
+    <article class="containerArticle">
+        <div class="contentBox">
+            <div class="aboutUsRow">
+                <header class="aboutUsH">Nossa Faculdade</header>
+                <p class="aboutUs">
+                A UNIESP é uma instituição de ensino superior comprometida com a excelência acadêmica e a formação integral de seus alunos. <br>
+                Oferecemos uma ampla variedade de cursos de graduação e pós-graduação, desenvolvidos para atender às demandas do mercado contemporâneo e promover o avanço do conhecimento.<br>
+                Nossa infraestrutura moderna, aliada a um corpo docente altamente qualificado, proporciona um ambiente propício ao aprendizado, à inovação e ao desenvolvimento de competências essenciais para o sucesso profissional. Valorizamos a pesquisa, a ética e o pensamento crítico, preparando nossos estudantes para enfrentar os desafios do mundo atual com responsabilidade, liderança e visão de futuro.
+                Na UNIESP, acreditamos que a educação transforma vidas e impulsiona a sociedade. <br>
+                Por isso, investimos continuamente em tecnologia, metodologias inovadoras e programas de apoio ao estudante, reafirmando nosso compromisso com a qualidade e a seriedade no ensino superior.
+                </p>
+            </div><img src="src/local.webp" alt="local" class="aboutUsImg">
+            <div class="aboutUsRow butS">
+                <p class="aboutUs Sod">Nossa sede está situada na Avenida do Conhecimento, nº 1234, bairro Universitário, São Paulo - SP, CEP 01234-567.<br>
+                     Localizada em uma região de fácil acesso, próxima a importantes vias e pontos de transporte público, a unidade conta com estacionamento próprio, áreas de convivência, jardins arborizados e infraestrutura moderna para receber alunos, professores e visitantes.<br><br>
+                     Venha nos conhecer e descubra um ambiente pensado para o desenvolvimento acadêmico e profissional.</p>
+                <header class="aboutUsH noss">Nossa Sede</header>
+                
+                
+                
+            </div>
+        </div>
+    </article>
+    <img src="src/graduate.svg" alt="graduação" class="aboutUsImg2">
+        <main class="containerLogin"> 
+            <div class="containerLogin2">
+                <h2 class="loginTitle">Login</h2>
+                <form class="loginForm">
+                    <div class="inputContainer">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    <button type="submit" class="btnLogin">Login</button>
-                </div>    
-            </div>    
-        </form>    
-    </div>
-
+                    <div class="inputContainer">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required>
+                        <img src="src/visao.png" alt="visao" class="eyeIcon" id="eyeIcon">
+                    </div>
+                    <button class="buttonLogin" type="submit">Entrar</button>
+                </form>
+            </div>
+            
+        </main>
+    
 </body>
-
 </html>

@@ -1,17 +1,14 @@
 
-formLogin.addEventListener("submit", function (event) {
-    console.log(userId.value, passwordReset.value);
-    if (userId.value === "" || passwordReset.value === "") {
+
+
+formLogin.addEventListener('submit', function (event) {
+    if (window.email.value.trim() === "" || window.password.value.trim() === "") {
         event.preventDefault();
-        alert("Preencha todos os campos!");
-        return
-    }
-    else if (!userId.value.includes("@")) {
+    } else {
         event.preventDefault();
-        alert("O campo de e-mail deve conter um e-mail válido!");
-        return
-    }
-    else {
-        alert("Login realizado com sucesso!");
+        LoginButton.textContent = "Logado!";
+        setTimeout(function () {
+            formLogin.submit();
+        }, 900);
     }
 })
