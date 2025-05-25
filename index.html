@@ -1,73 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graduação</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <script src="./scripts/login.js" defer></script>
-    <script src="./scripts/eyePass.js" defer></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <img src="/src/backOverlay.gif" alt="gif" class="backgroundVideo" aria-hidden="true">
-    <div class="background"></div>
-    <nav class="navBar">
-        <div>    
-            <a href="#"><img class="navBarIcon" src="src/srcInstagram.png"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Game Store</div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Assinatura</li>
+          <li>Suporte</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="tech-circle">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="list">
+        <div class="item active">
+          <div class="product-img">
+            <img src="./src/assets/img/cp77logo.png" alt="cp2077logo" />
+          </div>
+          <div class="content">
+            <p class="productTag">Um RPG Vivido</p>
+            <p class="productTitle">Cyberpunk 2077</p>
+            <p class="productDesc">
+              Cyberpunk 2077 é um RPG de ação em mundo aberto ambientado em uma
+              metrópole futurista vibrante e perigosa. Viva como um mercenário
+              em busca de poder, customize seu personagem e faça escolhas que
+              impactam a história. Explore Night City, enfrente gangues, hackers
+              e corporações em uma experiência imersiva cheia de ação e
+              tecnologia.
+            </p>
+            <button class="btn">Saiba Mais</button>
+          </div>
         </div>
-        <div class="navBarRight">
-            <h1 class="titleNav">UNIESP</h1>
-            <ol class="navBarList">
-                <li>Home</li>
-                <li>Sobre</li>
-                <li>Contato</li>
-            </ol>
+        <div class="item">
+          <div class="product-img">
+            <img src="./src/assets/img/gta5logo.png" alt="gta5logo" />
+          </div>
+          <div class="content">
+            <p class="productTag">Um Mundo Caótico</p>
+            <p class="productTitle">Grand Theft Auto V</p>
+            <p class="productDesc">
+              GTA V é um jogo de ação em mundo aberto ambientado na cidade
+              fictícia de Los Santos. Viva aventuras intensas controlando três
+              personagens diferentes, participe de assaltos, missões e explore
+              um vasto cenário urbano cheio de possibilidades, desafios e
+              liberdade para jogar do seu jeito.
+            </p>
+            <button class="btn">Saiba Mais</button>
+          </div>
         </div>
-    </nav>
-    <article class="containerArticle">
-        <div class="contentBox">
-            <div class="aboutUsRow">
-                <header class="aboutUsH">Nossa Faculdade</header>
-                <p class="aboutUs">
-                A UNIESP é uma instituição de ensino superior comprometida com a excelência acadêmica e a formação integral de seus alunos. <br>
-                Oferecemos uma ampla variedade de cursos de graduação e pós-graduação, desenvolvidos para atender às demandas do mercado contemporâneo e promover o avanço do conhecimento.<br>
-                Nossa infraestrutura moderna, aliada a um corpo docente altamente qualificado, proporciona um ambiente propício ao aprendizado, à inovação e ao desenvolvimento de competências essenciais para o sucesso profissional. Valorizamos a pesquisa, a ética e o pensamento crítico, preparando nossos estudantes para enfrentar os desafios do mundo atual com responsabilidade, liderança e visão de futuro.
-                Na UNIESP, acreditamos que a educação transforma vidas e impulsiona a sociedade. <br>
-                Por isso, investimos continuamente em tecnologia, metodologias inovadoras e programas de apoio ao estudante, reafirmando nosso compromisso com a qualidade e a seriedade no ensino superior.
-                </p>
-            </div><img src="src/local.webp" alt="local" class="aboutUsImg">
-            <div class="aboutUsRow butS">
-                <p class="aboutUs Sod">Nossa sede está situada na Avenida do Conhecimento, nº 1234, bairro Universitário, São Paulo - SP, CEP 01234-567.<br>
-                     Localizada em uma região de fácil acesso, próxima a importantes vias e pontos de transporte público, a unidade conta com estacionamento próprio, áreas de convivência, jardins arborizados e infraestrutura moderna para receber alunos, professores e visitantes.<br><br>
-                     Venha nos conhecer e descubra um ambiente pensado para o desenvolvimento acadêmico e profissional.</p>
-                <header class="aboutUsH noss">Nossa Sede</header>
-                
-                
-                
-            </div>
+        <div class="item">
+          <div class="product-img">
+            <img src="./src/assets/img/rdr2logo.png" alt="rdr2logo" />
+          </div>
+          <div class="content">
+            <p class="productTag">Um Mundo Cheio de Detalhe</p>
+            <p class="productTitle">Red Dead Redemption 2</p>
+            <p class="productDesc">
+              Red Dead Redemption 2 é um jogo de ação e aventura em mundo aberto
+              ambientado no Velho Oeste americano. Viva como Arthur Morgan,
+              membro de uma gangue de foras da lei, enfrentando desafios,
+              caçadas, tiroteios e escolhas morais em uma narrativa envolvente e
+              cheia de possibilidades.
+            </p>
+            <button class="btn">Saiba Mais</button>
+          </div>
         </div>
-    </article>
-    <img src="src/graduate.svg" alt="graduação" class="aboutUsImg2">
-        <main class="containerLogin"> 
-            <div class="containerLogin2">
-                <h2 class="loginTitle">Login</h2>
-                <form class="loginForm">
-                    <div class="inputContainer">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="inputContainer">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" required>
-                        <img src="src/visao.png" alt="visao" class="eyeIcon" id="eyeIcon">
-                    </div>
-                    <button class="buttonLogin" type="submit">Entrar</button>
-                </form>
-            </div>
-            
-        </main>
-    
-</body>
+        <div class="item">
+          <div class="product-img">
+            <img src="./src/assets/img/mhwlogo.png" alt="mhwlogo" />
+          </div>
+          <div class="content">
+            <p class="productTag">Batalhas Épicas</p>
+            <p class="productTitle">Monster Hunter Wilds</p>
+            <p class="productDesc">
+              Monster Hunter Wilds é um jogo de ação onde você enfrenta
+              criaturas gigantes em ambientes vastos e dinâmicos. Explore,
+              colete recursos, monte estratégias e lute em batalhas épicas
+              sozinho ou em grupo para conquistar recompensas e aprimorar seu
+              caçador.
+            </p>
+            <button class="btn">Saiba Mais</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-img">
+            <img src="./src/assets/img/wflogo.png" alt="warframelogo" />
+          </div>
+          <div class="content">
+            <p class="productTag">Um RPG Vivido</p>
+            <p class="productTitle">Warframe</p>
+            <p class="productDesc">
+              Warframe é um jogo de ação cooperativo gratuito em que você
+              controla guerreiros biomecânicos chamados Warframes. Explore
+              mundos futuristas, enfrente inimigos desafiadores, evolua suas
+              habilidades e personalize seu arsenal em missões rápidas e cheias
+              de ação, sozinho ou em equipe.
+            </p>
+            <button class="btn">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+      <div class="arrows">
+        <button class="arrow-btn" id="prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#fff"
+            class="bi bi-caret-left-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+            />
+          </svg>
+        </button>
+        <button class="arrow-btn" id="next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#fff"
+            class="bi bi-caret-right-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="indicators">
+        <div class="numbers">01</div>
+        <div class="dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
 </html>

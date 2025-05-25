@@ -1,14 +1,20 @@
 
-
-
-formLogin.addEventListener('submit', function (event) {
-    if (window.email.value.trim() === "" || window.password.value.trim() === "") {
-        event.preventDefault();
+window.eyeIcon.addEventListener("click", function (event) {
+    if (window.Password.type === "password") {
+        window.Password.type = "text";
+        window.eyeIcon.src = "./src/assets/eyeClosed.png";
     } else {
-        event.preventDefault();
-        LoginButton.textContent = "Logado!";
-        setTimeout(function () {
-            formLogin.submit();
-        }, 900);
+        window.Password.type = "password";
+        window.eyeIcon.src = "./src/assets/eyeOpen.png";
     }
 })
+
+window.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    window.buttonLogin.textContent = "Entrou!";
+    setTimeout(function () {
+        window.form.submit();
+    }, 2000);
+})
+
+
